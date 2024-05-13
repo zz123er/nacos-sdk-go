@@ -16,7 +16,7 @@
 
 package rpc_request
 
-import "github.com/nacos-group/nacos-sdk-go/v2/model"
+import "github.com/zz123er/nacos-sdk-go/v2/model"
 
 type ConfigRequest struct {
 	*Request
@@ -51,7 +51,7 @@ func (r *ConfigRequest) GetTenant() string {
 	return r.Tenant
 }
 
-//request of listening a batch of configs.
+// request of listening a batch of configs.
 type ConfigBatchListenRequest struct {
 	*ConfigRequest
 	Listen               bool                        `json:"listen"`

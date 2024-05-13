@@ -18,7 +18,8 @@ package filter
 
 import (
 	"fmt"
-	"github.com/nacos-group/nacos-sdk-go/v2/vo"
+
+	"github.com/zz123er/nacos-sdk-go/v2/vo"
 )
 
 type IConfigFilterChain interface {

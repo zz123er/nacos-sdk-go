@@ -18,11 +18,12 @@ package nacos_server
 
 import (
 	"context"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/http_agent"
 	"testing"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
+	"github.com/zz123er/nacos-sdk-go/v2/common/http_agent"
+
 	"github.com/stretchr/testify/assert"
+	"github.com/zz123er/nacos-sdk-go/v2/common/constant"
 )
 
 func Test_getAddressWithScheme(t *testing.T) {

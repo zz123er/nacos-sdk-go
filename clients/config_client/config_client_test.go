@@ -19,19 +19,20 @@ package config_client
 import (
 	"context"
 	"errors"
-	"github.com/nacos-group/nacos-sdk-go/v2/util"
 	"testing"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc/rpc_request"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc/rpc_response"
-	"github.com/nacos-group/nacos-sdk-go/v2/model"
+	"github.com/zz123er/nacos-sdk-go/v2/util"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/clients/nacos_client"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/http_agent"
-	"github.com/nacos-group/nacos-sdk-go/v2/vo"
+	"github.com/zz123er/nacos-sdk-go/v2/common/remote/rpc"
+	"github.com/zz123er/nacos-sdk-go/v2/common/remote/rpc/rpc_request"
+	"github.com/zz123er/nacos-sdk-go/v2/common/remote/rpc/rpc_response"
+	"github.com/zz123er/nacos-sdk-go/v2/model"
+
 	"github.com/stretchr/testify/assert"
+	"github.com/zz123er/nacos-sdk-go/v2/clients/nacos_client"
+	"github.com/zz123er/nacos-sdk-go/v2/common/constant"
+	"github.com/zz123er/nacos-sdk-go/v2/common/http_agent"
+	"github.com/zz123er/nacos-sdk-go/v2/vo"
 )
 
 var serverConfigWithOptions = constant.NewServerConfig("mse-xxx-p.nacos-ans.mse.aliyuncs.com", 8848)

@@ -19,7 +19,7 @@ package config_client
 import (
 	"testing"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/vo"
+	"github.com/zz123er/nacos-sdk-go/v2/vo"
 
 	"github.com/stretchr/testify/assert"
 )

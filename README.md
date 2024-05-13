@@ -1,6 +1,6 @@
 # Nacos-sdk-go [中文](./README_CN.md) #
 
-[![Build Status](https://travis-ci.org/nacos-group/nacos-sdk-go.svg?branch=master)](https://travis-ci.org/nacos-group/nacos-sdk-go) [![Go Report Card](https://goreportcard.com/badge/github.com/nacos-group/nacos-sdk-go)](https://goreportcard.com/report/github.com/nacos-group/nacos-sdk-go) ![license](https://img.shields.io/badge/license-Apache--2.0-green.svg)
+[![Build Status](https://travis-ci.org/nacos-group/nacos-sdk-go.svg?branch=master)](https://travis-ci.org/nacos-group/nacos-sdk-go) [![Go Report Card](https://goreportcard.com/badge/github.com/zz123er/nacos-sdk-go)](https://goreportcard.com/report/github.com/zz123er/nacos-sdk-go) ![license](https://img.shields.io/badge/license-Apache--2.0-green.svg)
 
 ---
 
@@ -19,7 +19,7 @@ Supported Nacos version over 2.x
 Use `go get` to install SDK：
 
 ```sh
-$ go get -u github.com/nacos-group/nacos-sdk-go/v2
+$ go get -u github.com/zz123er/nacos-sdk-go/v2
 ```
 
 ## Quick Examples
@@ -56,9 +56,9 @@ constant.ClientConfig {
 ```go
 
 constant.ServerConfig{
-    Scheme      string // the nacos server scheme,defaut=http,this is not required in 2.0 
-    ContextPath string // the nacos server contextpath,defaut=/nacos,this is not required in 2.0 
-    IpAddr      string // the nacos server address 
+    Scheme      string // the nacos server scheme,defaut=http,this is not required in 2.0
+    ContextPath string // the nacos server contextpath,defaut=/nacos,this is not required in 2.0
+    IpAddr      string // the nacos server address
     Port        uint64 // nacos server port
     GrpcPort    uint64 // nacos server grpc port, default=server port + 1000, this is not required
 }
@@ -173,7 +173,7 @@ cc := constant.ClientConfig{
 			ClientConfig: &cc,
 		},
 	)
-   
+
 ```
 
 ### Service Discovery
@@ -194,7 +194,7 @@ success, err := namingClient.RegisterInstance(vo.RegisterInstanceParam{
 		ClusterName: "cluster-a", // default value is DEFAULT
 		GroupName:   "group-a", // default value is DEFAULT_GROUP
 	})
-   
+
 ```
 
 * Deregister instance：DeregisterInstance

@@ -20,12 +20,12 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/tls"
+	"github.com/zz123er/nacos-sdk-go/v2/common/constant"
+	"github.com/zz123er/nacos-sdk-go/v2/common/tls"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/common/logger"
-	"github.com/nacos-group/nacos-sdk-go/v2/util"
 	"github.com/pkg/errors"
+	"github.com/zz123er/nacos-sdk-go/v2/common/logger"
+	"github.com/zz123er/nacos-sdk-go/v2/util"
 )
 
 type HttpAgent struct {

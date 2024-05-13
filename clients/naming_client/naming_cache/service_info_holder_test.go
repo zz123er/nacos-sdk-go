@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/common/logger"
-	"github.com/nacos-group/nacos-sdk-go/v2/model"
 	"github.com/stretchr/testify/assert"
+	"github.com/zz123er/nacos-sdk-go/v2/common/logger"
+	"github.com/zz123er/nacos-sdk-go/v2/model"
 )
 
 func TestServiceInfoHolder_isServiceInstanceChanged(t *testing.T) {

@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/nacos-group/nacos-sdk-go/v2/model"
+	"github.com/zz123er/nacos-sdk-go/v2/model"
 )
 
 type NamingRequest struct {
