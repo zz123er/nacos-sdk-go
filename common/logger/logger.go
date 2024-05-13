@@ -70,7 +70,7 @@ type Logger interface {
 }
 
 func init() {
-	zapLoggerConfig := zap.NewDevelopmentConfig()
+	zapLoggerConfig := zap.NewProductionConfig()
 	zapLoggerEncoderConfig := zapcore.EncoderConfig{
 		TimeKey:        "time",
 		LevelKey:       "level",
@@ -83,6 +83,7 @@ func init() {
 		EncodeDuration: zapcore.SecondsDurationEncoder,
 		EncodeCaller:   zapcore.ShortCallerEncoder,
 	}
+	zapLoggerConfig.Level = zap.NewAtomicLevelAt(zap.WarnLevel)
 	zapLoggerConfig.EncoderConfig = zapLoggerEncoderConfig
 	zapLogger, _ := zapLoggerConfig.Build(zap.AddCaller(), zap.AddCallerSkip(1))
 	SetLogger(&NacosLogger{zapLogger.Sugar()})
