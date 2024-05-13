@@ -18,14 +18,16 @@ package encryption
 
 import (
 	"fmt"
+	"net/http"
+	"os"
+	"strings"
+
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/kms"
 	dkms_api "github.com/aliyun/alibabacloud-dkms-gcs-go-sdk/openapi"
 	dkms_transfer "github.com/aliyun/alibabacloud-dkms-transfer-go-sdk/sdk"
 	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
 	"github.com/nacos-group/nacos-sdk-go/v2/common/logger"
 	"github.com/pkg/errors"
-	"net/http"
-	"strings"
 )
 
 type KmsClient struct {
@@ -114,6 +116,7 @@ func newKmsClient(regionId, ak, sk string, config *dkms_api.Config) (*KmsClient,
 	if err != nil {
 		return nil, err
 	}
+	client.Network = os.Getenv("NACOS_NETWORK")
 	return &KmsClient{
 		KmsTransferClient: client,
 	}, nil
