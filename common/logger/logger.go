@@ -70,7 +70,7 @@ type Logger interface {
 }
 
 func init() {
-	zapLoggerConfig := zap.NewProductionConfig()
+	zapLoggerConfig := zap.NewDevelopmentConfig()
 	zapLoggerEncoderConfig := zapcore.EncoderConfig{
 		TimeKey:        "time",
 		LevelKey:       "level",
