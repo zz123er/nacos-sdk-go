@@ -116,6 +116,7 @@ func newKmsClient(regionId, ak, sk string, config *dkms_api.Config) (*KmsClient,
 	if err != nil {
 		return nil, err
 	}
+	client.SetHTTPSInsecure(false)
 	client.Network = os.Getenv("NACOS_NETWORK")
 	return &KmsClient{
 		KmsTransferClient: client,
